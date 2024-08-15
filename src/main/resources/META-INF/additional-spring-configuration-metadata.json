@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "mvc.pathmatch",
+    "type": "java.lang.String",
+    "description": "A description for 'mvc.pathmatch'"
+  },
+  {
+    "name": "mvc.matching-strategy",
+    "type": "java.lang.String",
+    "description": "A description for 'mvc.matching-strategy'"
+  }
+]}
