@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: SpringbootEndToEndRealtimeApplicationc
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/springbootrealtimeapplication
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+#  profiles:
+#    active:
+#    - test
+logging:
+  file:
+    name: C:/Users/Welcome/OneDrive/Desktop/logs/SpringbootDockerElkKubernetProject.log
+    
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+server:
+  port: 8081			     
