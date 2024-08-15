@@ -9,15 +9,12 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 @SpringBootApplication
 public class SpringbootEndToEndRealtimeApplication extends SpringBootServletInitializer {
 	
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		// TODO Auto-generated method stub
-		return builder.sources(SpringbootEndToEndRealtimeApplication.class);
-	} 
+	 public static void main(String[] args) {
+	        SpringApplication.run(SpringbootEndToEndRealtimeApplication.class, args);
+	    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringbootEndToEndRealtimeApplication.class, args);
-		System.out.println("hello");
-	}
-
+	    @Override
+	    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+	        return builder.sources(SpringbootEndToEndRealtimeApplication.class);
+	    }
 }
