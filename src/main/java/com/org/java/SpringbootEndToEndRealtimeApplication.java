@@ -17,6 +17,7 @@ public class SpringbootEndToEndRealtimeApplication extends SpringBootServletInit
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootEndToEndRealtimeApplication.class, args);
+		System.out.println("hello");
 	}
 
 }
