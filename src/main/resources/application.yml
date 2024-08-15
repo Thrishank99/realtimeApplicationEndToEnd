@@ -20,4 +20,7 @@ logging:
 management:
   tracing:
     sampling:
-      probability: 1.0     
+      probability: 1.0
+mvc:
+ pathmatch:
+ matching-strategy : ANT_PATH_MATCHER			 
