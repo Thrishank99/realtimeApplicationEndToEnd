@@ -19,11 +19,11 @@ pipeline {
         stage('Push image to Hub'){
             steps{
                 script{
-                  withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
-                   bat 'docker login -u srinu255 -p ${dockerhubpwd}'
+                  withCredentials([usernamePassword(credentialsId: 'dockerhubpwd', passwordVariable: 'dockerhubpwd', usernameVariable: 'srinu255')]) {
+                  bat "docker login -u ${env.srinu255} -p ${env.dockerhubpwd}"
 
 }
-                   bat 'docker push srinu255/springboot-endtoend-application'
+                  bat 'srinu255/springboot-endtoend-application'
                 }
             }
         }  
