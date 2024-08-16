@@ -23,7 +23,7 @@ pipeline {
                   bat "docker login -u ${env.srinu255} -p ${env.dockerhubpwd}"
 
 }
-                  bat 'srinu255/springboot-endtoend-application'
+                  bat 'docker push srinu255/springboot-endtoend-application'
                 }
             }
         }  
