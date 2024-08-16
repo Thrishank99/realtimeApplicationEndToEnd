@@ -6,7 +6,7 @@ pipeline {
     stages{
         stage('Build Maven'){
             steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Thrishank99/realtimeApplicationEndToEnd.git']]])
+               checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Thrishank99/realtimeApplicationEndToEnd']])
                 bat 'mvn clean install'
             }
         }
@@ -20,3 +20,4 @@ pipeline {
         }     
     }
 }
+
