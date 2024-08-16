@@ -1,23 +1,19 @@
 pipeline {
     agent any
     tools{
-        maven 'Maven 3.9.8'
+        maven 'maven_3_9_8'
     }
     stages{
         stage('Build Maven'){
             steps{
-               checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Thrishank99/realtimeApplicationEndToEnd']])
-                bat 'mvn clean install'
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Java-Techie-jt/devops-automation']]])
+                sh 'mvn clean install'
             }
         }
         stage('Build docker image'){
             steps{
                 script{
-                    bat 'docker build -t srinu255/springboot-endtoend-application .'
+                    sh 'docker build -t javatechie/devops-integration .'
                 }
             }
-        
-        }     
-    }
-}
-
+        }
