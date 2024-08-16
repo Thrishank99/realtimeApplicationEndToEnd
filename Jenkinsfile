@@ -16,14 +16,16 @@ pipeline {
             }
         
         }
-        stage('Deploy Image') {
+        stage('Push image to Hub'){
             steps{
-               script {
-                docker.withRegistry( '', registryCredential ) {
-               dockerImage.push()
-          }
-        }
-      }     
-    }
+                script{
+                  withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
+                   bat 'docker login -u srinu255 -p ${dockerhubpwd}'
+
+}
+                   bat 'docker push srinu255/springboot-endtoend-application'
+                }
+            }
+        }  
    }
 }
