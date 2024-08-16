@@ -1,8 +1,6 @@
 pipeline {
-    agent { label 'main' }
-    tools{
-         maven 'maven 3.9.8'
-    }
+    agent any
+
     stages{
         stage('Build Maven'){
             steps{
