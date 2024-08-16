@@ -13,7 +13,7 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    bat 'docker build -t srinu255/springboot-elk-kubernate .'
+                    bat 'docker build -t srinu255/springboot-endtoend-application .'
                 }
             }
         
