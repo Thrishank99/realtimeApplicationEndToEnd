@@ -70,7 +70,7 @@
 	</dependencies>
 
 	<build>
-	<finalName>springboot-endtoend-application</finalName>
+	<finalName>springboot-endtoend-applicationlatest</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
