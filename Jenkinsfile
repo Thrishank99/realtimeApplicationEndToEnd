@@ -11,7 +11,7 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    bat 'docker build -t srinu255/springboot-endtoend-application .'
+                    bat 'docker build -t srinuk9676/springboot-endtoend-application .'
                 }
             }
         
@@ -19,11 +19,11 @@ pipeline {
         stage('Push image to Hub'){
             steps{
                 script{
-                  withCredentials([usernamePassword(credentialsId: 'dockerhubpwd', passwordVariable: 'dockerhubpwd', usernameVariable: 'srinu255')]) {
-                  bat "docker login -u ${env.srinu255} -p ${env.dockerhubpwd}"
+                  withCredentials([usernamePassword(credentialsId: 'dockerhubpwd', passwordVariable: 'dockerhubpwd', usernameVariable: 'srinuk9676')]) {
+                  bat "docker login -u ${env.srinuk9676} -p ${env.dockerhubpwd}"
 
 }
-                  bat 'docker push srinu255/springboot-endtoend-application'
+                  bat 'docker push srinuk9676/springboot-endtoend-application'
                 }
             }
         }  
